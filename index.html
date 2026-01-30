@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fluid Shape Cloud 3.5 | Análisis Pro</title>
-    <!-- Tailwind CSS para los estilos del Canvas -->
+    <!-- Tailwind CSS para el diseño responsivo -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Inter para la interfaz e JetBrains Mono para los datos numéricos -->
+    <!-- Lucide Icons para los iconos de la interfaz -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -15,20 +17,42 @@
             background-color: #0f172a;
             font-family: 'Inter', sans-serif;
         }
-        /* Estilos base para asegurar que React ocupe toda la pantalla */
         #root {
             min-height: 100vh;
+        }
+        /* Personalización de la barra de desplazamiento para un look más "Cloud" */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3b82f6;
         }
     </style>
 </head>
 <body>
-    <!-- El contenedor donde se renderiza tu código de fluid_analysis_app.jsx -->
     <div id="root"></div>
 
     <!-- 
-      Nota: En un entorno de desarrollo local (como Vite), 
-      este script apuntaría a tu archivo main.jsx o App.jsx 
+      IMPORTANTE: Para que este index funcione fuera de este entorno:
+      1. Debes tener instalado Node.js y React.
+      2. El archivo 'fluid_analysis_app.jsx' debe estar en tu carpeta de componentes.
+      3. Debes configurar Firebase con tus propias credenciales en 'firebaseConfig'.
     -->
-    <script type="module" src="/src/main.jsx"></script>
+    
+    <script type="module">
+        // Este bloque es representativo para cuando lo montes en un proyecto de React (Vite/Next.js)
+        // En un entorno real, importarías tu App de la siguiente manera:
+        // import React from 'react';
+        // import ReactDOM from 'react-dom/client';
+        // import App from './fluid_analysis_app.jsx';
+        // ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+    </script>
 </body>
 </html>
